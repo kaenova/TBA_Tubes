@@ -49,7 +49,7 @@ print(transition_table)
 # CFG
 # s -> NN VB NN
 # NN -> you | they | we | fans | cats | maps | dogs
-# VB -> sell | buy | see
+# VB -> see | buy | love
 
 # For starting node (q0)
 transition_table[("q0", " ")] = "q0"
@@ -65,7 +65,6 @@ transition_table[("q21", " ")] = "q21"
 transition_table[("q21", "y")] = "q10"
 transition_table[("q0", "y")] = "q10"
 transition_table[("q10", "o")] = "q11"
-transition_table[("q10", "u")] = "q20"
 transition_table[("q10", "u")] = "q20"
 
 # string "they"
@@ -107,3 +106,22 @@ transition_table[("q0", "d")] = "q7"
 transition_table[("q7", "o")] = "q8"
 transition_table[("q8", "g")] = "q9"
 transition_table[("q9", "s")] = "q20"
+
+# string "see"
+transition_table[("q21", "s")] = "q18"
+transition_table[("q0", "s")] = "q18"
+transition_table[("q18", "e")] = "q19"
+transition_table[("q19", "e")] = "q20"
+
+# string "love"
+transition_table[("q21", "l")] = "q16"
+transition_table[("q0", "l")] = "q16"
+transition_table[("q7", "o")] = "q17"
+transition_table[("q8", "v")] = "q19"
+transition_table[("q9", "e")] = "q20"
+
+# string "buy"
+transition_table[("q0", "b")] = "q14"
+transition_table[("q21", "b")] = "q14"
+transition_table[("q14", "u")] = "q15"
+transition_table[("q15", "y")] = "q20"
