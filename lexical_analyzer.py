@@ -1,10 +1,16 @@
 # Lexical Analyzer
 # Tugas Besar Teori Bahasa Automata
 # Code based from Ade Romadhony, School of Computing - Telkom University
-
+print("Tugas Besar Teori Bahasa Automata")
+print("Ananda Affan Fattahila (1301194175)\nArmadhani Hiro Juni Permana (130119)\nKaenova Mahendra Auditama (1301190324)")
+print("IF-43-02")
+print("Code based from Ade Romadhony, School of Computing - Telkom University")
+print("==================================")
 import string
 
 # inputting string
+print("Lexical Analyzer")
+print("Terminal words: you | they | we | fans | cats | maps | dogs | see | buy | love")
 kalimat = input("Masukkan kalimat/kata yang ingin diperiksa: ")
 input_string = kalimat.lower() + "#"
 
