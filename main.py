@@ -141,7 +141,7 @@ def LexicalAnalyzer(string_input):
                 "ERROR dalam Lexical Analyzer, {} tidak valid".format(current_token)
             )
         idx_char += 1
-
+    print()
     # Conclusion
     if state == "ACCEPT":
         print("semua token yang di input: {} valid".format(input_string))
@@ -242,8 +242,6 @@ def Parser(string_input):
         else:
             raise Exception("ERROR dalam Parsing kalimat {}".format(string_input))
         print("isi stack:", stack)
-        print()
-
     # conclusion
     print()
     if symbol == "EOS" and len(stack) == 0:
@@ -264,6 +262,7 @@ if __name__ == "__main__":
         "Terminal words: you | they | we | fans | cats | maps | dogs | see | buy | love"
     )
     kalimat = input("Masukkan kalimat/kata yang ingin diperiksa: ")
+    print("\n\n")
     print("===================== Lexical Analyzer =====================")
     LexicalAnalyzer(kalimat)
     print("===================== Parser =====================")
